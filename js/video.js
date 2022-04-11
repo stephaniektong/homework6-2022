@@ -13,7 +13,7 @@ let vol = video.volume
 document.querySelector("#play").addEventListener("click", function playvideo() {
 	console.log("Play Video");
 	video.play()
-	document.getElementById("volume").innerHTML = vol;
+	document.getElementById("volume").innerHTML = vol*100 + "%";
 });
 document.querySelector("#pause").addEventListener("click", function pausevideo() {
 	console.log("Pause Video");
@@ -59,7 +59,7 @@ document.querySelector("#mute").addEventListener("click", function mute() {
 
 document.querySelector("#slider").addEventListener("change", function() {
 	video.volume = this.value / 100
-	document.getElementById("volume").innerHTML = video.volume
+	document.getElementById("volume").innerHTML = video.volume*100 + "%"
 })
 
 
