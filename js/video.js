@@ -12,9 +12,11 @@ window.addEventListener("load", function() {
 let vol = video.volume
 document.querySelector("#play").addEventListener("click", function playvideo() {
 	console.log("Play Video");
-	video.play()
-	document.getElementById("volume").innerHTML = vol*100 + "%";
-});
+	video.play();})
+
+document.querySelector("#play").addEventListener("click", function volume100(){	
+	document.getElementById("volume").innerHTML = vol*100 + "%"}, {once:true})
+
 document.querySelector("#pause").addEventListener("click", function pausevideo() {
 	console.log("Pause Video");
 	video.pause()
